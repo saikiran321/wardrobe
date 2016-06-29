@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="Wardrobe_Assistant.Intro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Wardrobe_Assistant"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot Title="Pivot">
+
+            <PivotItem Header="Step1">
+                <Grid>
+                <Image x:ConnectionId='4' x:Name="image" HorizontalAlignment="Left" Height="106" Margin="92,0,0,0" VerticalAlignment="Top" Width="147" Source="Assets/Clo2.jpg"/>
+                    <TextBlock x:ConnectionId='5' x:Name="textBlock1" HorizontalAlignment="Left" Margin="125,0,0,362" TextWrapping="Wrap" Text="Going out ?" VerticalAlignment="Bottom"/>
+                    <TextBlock x:ConnectionId='6' x:Name="textBlock11" HorizontalAlignment="Left" Margin="92,0,0,231" TextWrapping="Wrap" Text="Don't know what to wear ?" VerticalAlignment="Bottom"/>
+                </Grid>
+
+            </PivotItem>
+            <PivotItem Header="Step2">
+                <TextBlock x:ConnectionId='3' x:Name="textBlock2" HorizontalAlignment="Left" Margin="164,99,0,0" TextWrapping="Wrap" Text="Step2" VerticalAlignment="Bottom"/>
+            </PivotItem>
+
+            <PivotItem Header="Step3">
+                <Grid>
+                    <TextBlock x:ConnectionId='1' x:Name="textBlock3" HorizontalAlignment="Left" Margin="164,99,0,0" TextWrapping="Wrap" Text="Step3" VerticalAlignment="Bottom"/>
+
+                    <Button x:ConnectionId='2' x:Name="button" Content="Get Started" HorizontalAlignment="Left" Margin="126,172,0,0" VerticalAlignment="Top"                      />
+                </Grid>
+            </PivotItem>
+
+        </Pivot>
+
+    </Grid>
+</Page>
+

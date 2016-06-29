@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="Wardrobe_Assistant.Opt3_Collections"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Wardrobe_Assistant"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Flyout x:Key="OptionList">
+            <StackPanel>
+                <ListView x:Name="listView1" VerticalAlignment="Top" >
+                    <Button Content="Explore" Click="Explore_Click"/>
+                    <Button x:Name="AddDress" Content="Add Dress" HorizontalAlignment="Center" Click="AddDress_Click" />
+
+                    <Button Content="Mix &amp; Match" HorizontalAlignment="Center" Click="MixMatch_Click" />
+                    <Button Content="My Collections" HorizontalAlignment="Center" Click="MyCollections_Click" />
+                </ListView>
+            </StackPanel>
+        </Flyout>
+    </Page.Resources>
+
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFE6EDF6" Offset="0"/>
+                <GradientStop Color="#FF1781CB" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Content="Menu" Flyout="{StaticResource OptionList}" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18.667" />
+
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="138,21,0,0" TextWrapping="Wrap" Text="My Collections" VerticalAlignment="Top"/>
+
+        <FlipView x:Name="flipViewtop" HorizontalAlignment="Left" Margin="70,84,0,0" VerticalAlignment="Top" Width="209" Height="219"  SelectionChanged="flipViewtop_SelectionChanged">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding}" />
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+        <FlipView x:Name="flipViewbottom" HorizontalAlignment="Left" Margin="70,303,0,0" VerticalAlignment="Top" Width="209" Height="192">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding}" />
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+    </Grid>
+</Page>

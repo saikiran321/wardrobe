@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="Wardrobe_Assistant.Opt2_MixMatch"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Wardrobe_Assistant"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:ConnectionId='1' x:Name="textBlock1" HorizontalAlignment="Left" Margin="139,10,0,0" TextWrapping="Wrap" Text="Mix and Match" VerticalAlignment="Top"/>
+        <TextBlock x:ConnectionId='2' x:Name="textBlock" HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="Tops" VerticalAlignment="Top"/>
+        <TextBlock x:ConnectionId='3' x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,335,0,0" TextWrapping="Wrap" Text="Bottoms" VerticalAlignment="Top"/>
+        <ComboBox x:ConnectionId='4' x:Name="comboBox" HorizontalAlignment="Left" Margin="230,35,0,0" VerticalAlignment="Top" Width="120" >
+            <Button Content="Shirts"/>
+            <Button Content="T-shirts"/>
+        </ComboBox>
+        <ComboBox x:ConnectionId='5' x:Name="comboBox1" HorizontalAlignment="Left" Margin="230,335,0,0" VerticalAlignment="Top" Width="120" >
+            <Button Content="Shorts"/>
+            <Button Content="Jeans"/>
+            <Button Content="Skirts"/>
+        </ComboBox>
+        <Button x:ConnectionId='6' x:Name="button" Content="Back " HorizontalAlignment="Left" VerticalAlignment="Top"                     />
+        <FlipView x:ConnectionId='7' x:Name="flipViewtop" HorizontalAlignment="Left" Margin="70,90,0,0" VerticalAlignment="Top" Width="209" Height="219" >
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding}" />
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+        <FlipView x:ConnectionId='8' x:Name="flipViewbottom" HorizontalAlignment="Left" Margin="70,400,0,0" VerticalAlignment="Top" Width="209" Height="192">
+        <FlipView.ItemTemplate>
+            <DataTemplate>
+                <Image Source="{Binding}" />
+            </DataTemplate>
+        </FlipView.ItemTemplate>
+        </FlipView>
+        <Button x:ConnectionId='9' x:Name="button1" Content="Save" HorizontalAlignment="Left" Margin="264,524,0,0" VerticalAlignment="Top"                      />
+
+    </Grid>
+</Page>
+
